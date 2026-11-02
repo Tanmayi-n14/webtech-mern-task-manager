@@ -124,3 +124,10 @@ Ensure you have installed:
 
 ## 📄 License
 This project is open-source under the ISC License.
+
+---
+
+## 👤 Author
+
+* **Tanmayi Nagabhairava** ([@Tanmayi-n14](https://github.com/Tanmayi-n14)) — `PES1UG24CS493`
+* Department of Computer Science & Engineering, PES University
