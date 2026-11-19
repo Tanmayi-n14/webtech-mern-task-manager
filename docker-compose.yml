@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: taskmanager-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: ./backend
+    container_name: taskmanager-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - MONGO_URI=mongodb://mongo:27017/taskmanager
+      - JWT_SECRET=taskmanager-secure-jwt-key
+    depends_on:
+      - mongo
+
+volumes:
+  mongo_data:
